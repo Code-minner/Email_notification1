@@ -32,10 +32,10 @@
             max-width: 600px;
             margin: 20px auto;
             background-color: var(--primary_color);
-            border: 1px solid var(--light_gray);
+    
             border-radius: 0px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
 
         }
 
@@ -194,15 +194,15 @@
             overflow: visible;
             display: flex;
             flex-direction: column;
-            gap: -10px;
+            gap: 10px;
             justify-content: center;
             align-items: center;
         }
 
         .section_two_sub_content_one {
-            width: 75%;
+            width: 70%;
             display: grid;
-            grid-template-columns:repeat(4, 24.8%);
+            grid-template-columns: repeat(auto-fit, 80px);
             align-items: center;
             justify-content: center;
             border-top: 1px solid var(--secondary_color);
@@ -211,14 +211,20 @@
 
         }
 
-        .section_two_sub_content_one i {
-            font-size: 2.5em;
+        .section_two_sub_content_one p {
+            width: auto;
         }
 
-       
+        .section_two_sub_content_one i {
+            font-size: 2.3em;
+        }
+
+
         .section_two_sub_content_one_sub {
-            padding: 20px 10px;
+            padding: 20px 10px 10px 10px;
             position: relative;
+        
+            
         }
 
         .section_two_sub_content_one_sub::after {
@@ -235,7 +241,7 @@
         .section_two_sub_content_one_sub:last-child:after {
             display: none;
         }
-        
+
 
         .section_two_sub_content_one_sub:last-child {
             border: none;
@@ -249,7 +255,7 @@
 
         .section_two_sub_content_two_sub {
             display: grid;
-            grid-template-columns: 30% 70%;
+            grid-template-columns: 40% 60%;
             justify-content: space-between;
             align-items: start;
             gap: 10px;
@@ -259,14 +265,20 @@
 
         .section_two_sub_content_two_sub img {
             width: 100%;
-            height: 100px;
+            height: 120px;
+            min-height: 100px;
             object-fit: cover;
-            border-radius: 4px;
+
             padding-right: 10px;
         }
 
+        .content_two_sub_comtainer {
+            height: 100%;
+            width: 100%;
+        }
+
         .content_two_sub_comtainer p {
-            font-size: 1.2em;
+            font-size: 1em;
             width: 100%;
             max-width: 100%;
             margin: auto;
@@ -275,7 +287,7 @@
         }
 
         .content_two_sub_comtainer span {
-            font-size: .9em;
+            font-size: .8em;
             color: var(--tertiary_color);
             margin-top: 8px;
             font-weight: 600;
@@ -315,6 +327,7 @@
 
 
         .download_buttons {
+            width: fit-content;
             display: flex;
             gap: 20px;
             justify-content: left;
@@ -324,7 +337,7 @@
         .play-store-button img,
         .app-store-button img {
             height: 60px;
-            width: auto;
+            width: 100%;
             transition: transform 0.3s ease;
         }
 
@@ -463,7 +476,7 @@
 
                             <div class="section_two_sub_content_one">
 
-                          
+
                                 <div class="section_two_sub_content_one_sub">
                                     <i class='bx bx-search-alt'></i>
                                     <p>Expert Matching</p>
@@ -473,12 +486,8 @@
                                     <p>Flexible Scheduling</p>
                                 </div>
                                 <div class="section_two_sub_content_one_sub">
-                                    <i class='bx bx-message-rounded-dots' ></i>
+                                    <i class='bx bx-message-rounded-dots'></i>
                                     <p>Ongoing Support</p>
-                                </div>
-                                <div class="section_two_sub_content_one_sub">
-                                    <i class='bx bx-check-circle'></i>
-                                    <p>Professionals </p>
                                 </div>
 
                             </div>
