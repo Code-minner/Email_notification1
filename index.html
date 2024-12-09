@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Connection Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        :root {
+            --primary_color: #ffffff;
+            --secondary_color: #000000;
+            --tertiary_color: #b60824;
+            --light_gray: rgba(190, 186, 186, 0.212);
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: var(--primary_color);
+            border: 1px solid var(--light_gray);
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .header {
+            padding: 20px 0 30px;
+            width: auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header_sub {
+            text-align: center;
+            display: inline-flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: left;
+            gap: 5px;
+            position: relative;
+        }
+
+        .header img {
+            width: 100px;
+        }
+
+        .header h1 {
+            color: #050505;
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .main_section_sub {
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_section_sub_container {
+            width: 100%;
+        }
+
+        .section_one {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .section_one_sub {
+            width: auto;
+            height: 60%;
+            background-color: var(--light_gray);
+            padding: 20px 20px 0;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            gap: -10px;
+        }
+
+        .section_one_sub h2:nth-child(1) {
+            color: var(--secondary_color);
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+
+        .section_one_sub .head2 {
+            font-size: 2.5em;
+            font-size: 400;
+            position: relative;
+            bottom: -10px;
+        }
+
+        .section_one_sub h2 span {
+            color: var(--tertiary_color);
+        }
+
+        .section_one_sub p {
+            font-size: 1.1em;
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            color: var(--tertiary_color);
+        }
+
+        .feature_image {
+            width: 90%;
+            height: 45vh;
+            margin: auto;
+            position: relative;
+            bottom: -40px;
+        }
+
+        .feature_image::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.274);
+        }
+
+        .feature_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button {
+            margin: 60px auto 20px;
+            width: 100%;
+            max-width: fit-content;
+        }
+
+        .button a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--primary_color);
+            color: var(--secondary_color);
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.192);
+        }
+
+        .button a:hover {
+            background-color: #fdeaee;
+        }
+
+        .button a i {
+            font-size: 1.4em;
+            padding: 5px;
+            color: var(--tertiary_color);
+        }
+
+
+        .section_two {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .section_two_sub {
+            width: auto;
+            height: 100%;
+            padding: 20px 20px;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            gap: -10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section_two_sub_content_one {
+            width: 75%;
+            display: grid;
+            grid-template-columns:repeat(4, 24.8%);
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid var(--secondary_color);
+            padding: 10px 30px 10px;
+            text-align: center;
+
+        }
+
+        .section_two_sub_content_one i {
+            font-size: 2.5em;
+        }
+
+       
+        .section_two_sub_content_one_sub {
+            padding: 20px 10px;
+            position: relative;
+        }
+
+        .section_two_sub_content_one_sub::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            margin-left: 10px;
+            background-color: var(--secondary_color);
+        }
+
+        .section_two_sub_content_one_sub:last-child:after {
+            display: none;
+        }
+        
+
+        .section_two_sub_content_one_sub:last-child {
+            border: none;
+        }
+
+        .section_two_sub_content_two {
+            width: auto;
+            height: 100%;
+            padding: 20px
+        }
+
+        .section_two_sub_content_two_sub {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            justify-content: space-between;
+            align-items: start;
+            gap: 10px;
+            padding: 20px 0;
+            border-bottom: 1.5px solid var(--secondary_color);
+        }
+
+        .section_two_sub_content_two_sub img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            padding-right: 10px;
+        }
+
+        .content_two_sub_comtainer p {
+            font-size: 1.2em;
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            color: var(--secondary_color);
+            letter-spacing: 1.4px;
+        }
+
+        .content_two_sub_comtainer span {
+            font-size: .9em;
+            color: var(--tertiary_color);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        footer {
+            width: auto;
+            padding: 20px 20px;
+            margin: auto;
+        }
+
+        .footer_sub {
+            width: 100%;
+        }
+
+        .logo {
+            text-align: center;
+            display: inline-flex;
+            margin: 0;
+            align-items: center;
+            justify-content: left;
+            gap: 5px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .logo h1 {
+            color: #050505;
+            font-size: 2.2em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+
+        .download_buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: left;
+            margin: 20px 0;
+        }
+
+        .play-store-button img,
+        .app-store-button img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .play-store-button img:hover,
+        .app-store-button img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer_sub ul {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin-top: 50px;
+        }
+
+        .footer_sub ul li a {
+            font-size: 2.5em;
+
+            color: var(--secondary_color);
+        }
+
+
+        .footer_links {
+            margin-bottom: 50px;
+        }
+
+        .footer_link {
+            color: var(--secondary_color);
+            padding: 0 5px 0 0;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .footer_link:last-child {
+            padding-left: 5px;
+        }
+
+        .footer_link:first-child:after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            right: 0;
+            margin-left: 10px;
+            background-color: var(--secondary_color);
+        }
+
+        .footer_link:hover {
+            text-decoration: underline;
+        }
+
+        .footer_legal {
+            font-size: 1.1em;
+            color: var(--secondary_color);
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer_legal p:first-child {
+            border-bottom: 1px solid var(--secondary_color);
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .footer_legal p:last-child {
+            text-align: center
+        }
+
+        .footer_legal p {
+            margin: 5px 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="main_section">
+            <!-- Header -->
+            <div class="header">
+
+                <div class="header_sub">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiZeNDhhvJfDyhQQMk4EatWar3OxbqT03uU127uJVNh8Ir_FhoxMODlvq5hPqpq3HnwK4KRCgrvveklv5mTFMOrtjsgdp-DDZGKeb2t774myR-7V_Hxix0ckW-lFY5WXx5I0QusQsA1AOJmR_c5wlfG0rO86bTOijfppFHrPV_Ef3nZb6M6i4zMOTZP2CQ"
+                        alt="Company Logo">
+                    <h1>Prosplug</h1>
+
+                </div>
+            </div>
+
+            <div class="main_section_sub">
+
+                <div class="main_section_sub_container">
+
+                    <div class="section_one">
+
+                        <div class="section_one_sub">
+
+                            <h2>Dear Name</h2>
+
+                            <p>Welcome to Your Gateway to Trusted Connections</p>
+
+                            <h2 class="head2">Discover Reliable <span>Connections</span> Anytime, Anywhere, and Achieve
+                                More</h2>
+
+                            <div class="feature_image">
+                                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiqjrrFh8pzkSskKxlZBkVUpsgfSs_geFZOPWd9EQAb05ua176BJHzy_fa0n9G7vrnS2mJcLmORkld802Stc1CJuRh1ns96hRV-5Pd218tnBqsKtd-LDUqpSLuct8WzUqy2NuNwsIRuCb6r9xdURnt8VgFpU9XWV4d4eBjYMAEzgAdmKRcoTeaDwEpA4Xc"
+                                    alt="" class="bg_img">
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="button">
+                        <a href="#">Get Started<i class='bx bx-right-arrow-alt'></i>
+
+                        </a>
+                    </div>
+
+                    <div class="section_two">
+
+                        <div class="section_two_sub">
+
+                            <div class="section_two_sub_content_one">
+
+                          
+                                <div class="section_two_sub_content_one_sub">
+                                    <i class='bx bx-search-alt'></i>
+                                    <p>Expert Matching</p>
+                                </div>
+                                <div class="section_two_sub_content_one_sub">
+                                    <i class='bx bx-calendar'></i>
+                                    <p>Flexible Scheduling</p>
+                                </div>
+                                <div class="section_two_sub_content_one_sub">
+                                    <i class='bx bx-message-rounded-dots' ></i>
+                                    <p>Ongoing Support</p>
+                                </div>
+                                <div class="section_two_sub_content_one_sub">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p>Professionals </p>
+                                </div>
+
+                            </div>
+
+                            <div class="section_two_sub_content_two">
+
+                                <div class="section_two_sub_content_two_text">
+                                    <h2>Unlock the Power of Connection and Simplify Your Search for Reliable
+                                        Professionals, Helping You Find the Right Match.</h2>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://connected.co.za/images/webp/Header_Image_-_Instant_Access_Slider_1.webp"
+                                        alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong>Instant Connections:</strong> Find the right services and
+                                            professionals effortlessly, anytime and anywhere.</p>
+                                        <span>98% of users connect with a professional within 5 minutes.</span>
+                                    </div>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAddRBuIpYSvGMz2FYwex_1jT_spnIL6V7Xg&s"
+                                        alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong>Expert Solutions:</strong> Quickly find trusted services and
+                                            professionals in your area with just a few clicks.</p>
+                                        <span>Over 5,000 verified professionals ready to assist you.</span>
+                                    </div>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiVxBGW1ALxvjBUEgQMafVQzft0OMhHWBnws3iRy9bQ1MluKEovg5qAtTwSpUT1ePAa_I0ZDSzpA_9YkshVJnpZc4W_cxEM12AanSqS25KyHmoT0ipz30-is0kJ-Ml1vvFw4ezfintqKnB00DBVvd5rzuk5Pd3INZEVk0_d6EErZKTCfCIQSsN1vXiE524"
+                                        alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong>Seamless Collaboration:</strong> Collaborate smoothly and achieve
+                                            success with trusted professionals at your fingertips.</p>
+                                        <span>97% of projects are completed successfully through the platform.</span>
+                                    </div>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozWdvg8blw0A8obO1qJNwzwsPOLq1Ax-xxQ2lR9WoS1u1DhKC3GQaK8s947l_Hex8lQw&usqp=CAU"
+                                        alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong>Your Network Hub:</strong> Connect, grow, and thrive within a dynamic
+                                            community of skilled experts.</p>
+                                        <span>Join a community of over 10,000 active users and professionals.</span>
+                                    </div>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiWS0zGPGJ4aWu-B_x8B_aDrFnjXU8At1TFMrlBb5DaPqsMyWiHN3_KlvjYre1ziAYMKMS4RsO7pjz0sNUCAMV9kAl6Hq7SYUtzMviFiBxf6_DzKH3lOK5D_E4cq6t9-kCeFHBQ3p5A844U1VcRJ8JhbUXpRtVTM2Mv1hU5bK4LF2WZBzIXAlXML4v95cs"
+                                        alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong>Services On-Demand:</strong> Quickly locate the help you need, right
+                                            when you need it most.</p>
+                                        <span>24/7 access to services and support.</span>
+                                    </div>
+                                </div>
+
+                                <div class="section_two_sub_content_two_sub">
+                                    <img src="https://primalogik.com/wp-content/uploads/2023/02/image3-2.jpg" alt="">
+                                    <div class="content_two_sub_comtainer">
+                                        <p><strong> Empower Your Skills:</strong> Offer your expertise and connect with
+                                            those who need your services.</p>
+                                        <span>87% of service providers report increased client engagement.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <footer>
+
+                <div class="footer_sub">
+                    <div class="logo">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiZeNDhhvJfDyhQQMk4EatWar3OxbqT03uU127uJVNh8Ir_FhoxMODlvq5hPqpq3HnwK4KRCgrvveklv5mTFMOrtjsgdp-DDZGKeb2t774myR-7V_Hxix0ckW-lFY5WXx5I0QusQsA1AOJmR_c5wlfG0rO86bTOijfppFHrPV_Ef3nZb6M6i4zMOTZP2CQ"
+                            alt="Company Logo">
+                        <h1>Prosplug</h1>
+
+                    </div>
+
+                    <div class="button_section">
+                        <p> Download the Prosplus to
+                            Stay connected on the go!</p>
+
+
+                        <div class="download_buttons">
+
+                            <a href="https://play.google.com/store" class="play-store-button" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Download on Google Play">
+                            </a>
+                            <a href="https://www.apple.com/app-store/" class="app-store-button" target="_blank">
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                    alt="Download on the App Store">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <ul>
+
+                        <li>
+
+                            <a href="https://youtube.com/@mathsmagic-a?si=dEvQrQA_d09TDVGA"><i
+                                    class='bx bxl-youtube'></i></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/fagbenro-timileyin-528b5b1b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class='bx bxl-linkedin'></i></a>
+                        </li>
+
+                        <li>
+                            <a href="https://x.com/afrika_math?t=6odoFbI6JoDjEAoCxUEKZQ&s=08"><i
+                                    class='bx bxl-twitter'></i></a>
+                        </li>
+
+
+                        <li>
+                            <a href="https://www.instagram.com/afrika_kunmi?igsh=OThlNmJ2MHBiNWx0" target="_blank"><i
+                                    class='bx bxl-instagram'></i></a>
+                        </li>
+
+                    </ul>
+                    <div class="footer_links">
+                        <a href="#" class="footer_link">About us </a>
+                        <a href="#" class="footer_link">Prosplug Business</a>
+                    </div>
+
+                    <!-- Legal Text -->
+                    <div class="footer_legal">
+                        <p>
+                            You received this email because you are currently signed up to receive these via your
+                            preference
+                            settings. You may adjust your preferences at any time by clicking the links above.
+                        </p>
+                        <p>&copy; 2024 Prosplug, Inc.</p>
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
