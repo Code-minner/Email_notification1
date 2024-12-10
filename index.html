@@ -32,10 +32,10 @@
             max-width: 600px;
             margin: 20px auto;
             background-color: var(--primary_color);
-    
+
             border-radius: 0px;
             overflow: hidden;
-        
+
 
         }
 
@@ -59,12 +59,12 @@
         }
 
         .header img {
-            width: 100px;
+            width: 70px;
         }
 
         .header h1 {
             color: #050505;
-            font-size: 2.2em;
+            font-size: 1.7em;
             margin: 0;
             font-weight: 700;
         }
@@ -101,12 +101,12 @@
 
         .section_one_sub h2:nth-child(1) {
             color: var(--secondary_color);
-            font-size: 1.6em;
+            font-size: 1.2em;
             font-weight: 600;
         }
 
         .section_one_sub .head2 {
-            font-size: 2.5em;
+            font-size: 1.5em;
             font-size: 400;
             position: relative;
             bottom: -10px;
@@ -117,7 +117,7 @@
         }
 
         .section_one_sub p {
-            font-size: 1.1em;
+            font-size: 1em;
             width: 100%;
             max-width: 100%;
             margin: auto;
@@ -126,10 +126,10 @@
 
         .feature_image {
             width: 90%;
-            height: 45vh;
+            height: 30vh;
             margin: auto;
             position: relative;
-            bottom: -40px;
+            bottom: -40px
         }
 
         .feature_image::after {
@@ -139,13 +139,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.274);
+            background-color: rgba(0, 0, 0, 0.13);
         }
 
         .feature_image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
         }
 
         .button {
@@ -213,18 +214,21 @@
 
         .section_two_sub_content_one p {
             width: auto;
+            font-size: .9em;
         }
 
         .section_two_sub_content_one i {
-            font-size: 2.3em;
+            font-size: 2em;
         }
 
 
         .section_two_sub_content_one_sub {
             padding: 20px 10px 10px 10px;
             position: relative;
-        
-            
+        }
+
+        .section_two_sub_content_two_text h2 {
+            font-size: 1em;
         }
 
         .section_two_sub_content_one_sub::after {
@@ -255,9 +259,9 @@
 
         .section_two_sub_content_two_sub {
             display: grid;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 30% 70%;
             justify-content: space-between;
-            align-items: start;
+            align-items: flex-start;
             gap: 10px;
             padding: 20px 0;
             border-bottom: 1.5px solid var(--secondary_color);
@@ -265,20 +269,25 @@
 
         .section_two_sub_content_two_sub img {
             width: 100%;
-            height: 120px;
-            min-height: 100px;
+            height: 70px;
             object-fit: cover;
 
             padding-right: 10px;
         }
 
         .content_two_sub_comtainer {
-            height: 100%;
+
             width: 100%;
+            height: auto;
+            display: flex;
+            grid-template-columns: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
         .content_two_sub_comtainer p {
-            font-size: 1em;
+            font-size: .9em;
             width: 100%;
             max-width: 100%;
             margin: auto;
@@ -287,7 +296,7 @@
         }
 
         .content_two_sub_comtainer span {
-            font-size: .8em;
+            font-size: .7em;
             color: var(--tertiary_color);
             margin-top: 8px;
             font-weight: 600;
@@ -315,30 +324,39 @@
         }
 
         .logo img {
-            width: 100px;
+            width: 70px;
         }
 
         .logo h1 {
             color: #050505;
-            font-size: 2.2em;
+            font-size: 1.7em;
             margin: 0;
             font-weight: 700;
         }
 
 
         .download_buttons {
-            width: fit-content;
+            width: auto;
             display: flex;
-            gap: 20px;
+            align-items: start;
             justify-content: left;
+            gap: 0px;
             margin: 20px 0;
         }
 
         .play-store-button img,
         .app-store-button img {
             height: 60px;
-            width: 100%;
+            width: 80%;
+            margin: 0;
+            padding: 0;
             transition: transform 0.3s ease;
+        }
+
+        .app-store-button img {
+            margin-left: -20px;
+            height: 65px;
+            margin-top: -3px
         }
 
         .play-store-button img:hover,
@@ -371,7 +389,7 @@
             color: var(--secondary_color);
             padding: 0 5px 0 0;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 700;
             position: relative;
         }
@@ -395,7 +413,7 @@
         }
 
         .footer_legal {
-            font-size: 1.1em;
+            font-size: .9em;
             color: var(--secondary_color);
             line-height: 1.5;
             letter-spacing: 1.2px;
@@ -416,6 +434,29 @@
 
         .footer_legal p {
             margin: 5px 0;
+        }
+
+        @media (max-width:500px) {
+
+            .feature_image {
+            width: 90%;
+            height: 20vh;
+            margin: auto;
+            position: relative;
+            bottom: -40px
+        }
+
+            .section_two_sub_content_two_sub {
+                grid-template-columns: 40% 60%;
+            }
+
+            .section_two_sub_content_two_sub img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                padding-right: 10px;
+            }
         }
     </style>
 
@@ -454,7 +495,7 @@
                                 More</h2>
 
                             <div class="feature_image">
-                                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiqjrrFh8pzkSskKxlZBkVUpsgfSs_geFZOPWd9EQAb05ua176BJHzy_fa0n9G7vrnS2mJcLmORkld802Stc1CJuRh1ns96hRV-5Pd218tnBqsKtd-LDUqpSLuct8WzUqy2NuNwsIRuCb6r9xdURnt8VgFpU9XWV4d4eBjYMAEzgAdmKRcoTeaDwEpA4Xc"
+                                <img src="https://img.freepik.com/free-vector/people-holding-connected-copy-space-circle-icons_53876-66230.jpg"
                                     alt="" class="bg_img">
                             </div>
 
@@ -524,14 +565,14 @@
                                         alt="">
                                     <div class="content_two_sub_comtainer">
                                         <p><strong>Seamless Collaboration:</strong> Collaborate smoothly and achieve
-                                            success with trusted professionals at your fingertips.</p>
-                                        <span>97% of projects are completed successfully through the platform.</span>
+                                            success with trusted professionals.</p>
+                                        <span>97% of projects are completed through the platform.</span>
                                     </div>
                                 </div>
 
                                 <div class="section_two_sub_content_two_sub">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozWdvg8blw0A8obO1qJNwzwsPOLq1Ax-xxQ2lR9WoS1u1DhKC3GQaK8s947l_Hex8lQw&usqp=CAU"
-                                        alt="">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxnkzpWjZDMXjWWlAhtJwrgnlxcBTYOWIZ0g&s"
+                                        alt=""> 
                                     <div class="content_two_sub_comtainer">
                                         <p><strong>Your Network Hub:</strong> Connect, grow, and thrive within a dynamic
                                             community of skilled experts.</p>
@@ -540,8 +581,7 @@
                                 </div>
 
                                 <div class="section_two_sub_content_two_sub">
-                                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiWS0zGPGJ4aWu-B_x8B_aDrFnjXU8At1TFMrlBb5DaPqsMyWiHN3_KlvjYre1ziAYMKMS4RsO7pjz0sNUCAMV9kAl6Hq7SYUtzMviFiBxf6_DzKH3lOK5D_E4cq6t9-kCeFHBQ3p5A844U1VcRJ8JhbUXpRtVTM2Mv1hU5bK4LF2WZBzIXAlXML4v95cs"
-                                        alt="">
+                                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiWS0zGPGJ4aWu-B_x8B_aDrFnjXU8At1TFMrlBb5DaPqsMyWiHN3_KlvjYre1ziAYMKMS4RsO7pjz0sNUCAMV9kAl6Hq7SYUtzMviFiBxf6_DzKH3lOK5D_E4cq6t9-kCeFHBQ3p5A844U1VcRJ8JhbUXpRtVTM2Mv1hU5bK4LF2WZBzIXAlXML4v95cs" alt="">                 
                                     <div class="content_two_sub_comtainer">
                                         <p><strong>Services On-Demand:</strong> Quickly locate the help you need, right
                                             when you need it most.</p>
